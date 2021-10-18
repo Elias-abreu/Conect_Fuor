@@ -4,7 +4,7 @@ import pygame
 import pygame
 import sys
 import math
-from jogo_conect4.heuristica import Heuristicas
+from heuristica import Heuristicas
 
 global contador_no
 # implementar tabuleiro cheio = ok
