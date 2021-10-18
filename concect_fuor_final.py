@@ -311,7 +311,7 @@ class Conect_fuor_Final:
             if gameover:
                 pygame.time.wait(tempo)
 
-    def principal_d(self, jogador):
+    def principal_d(self, jogador,heuristica):
         grid = self.iniciar_grade()
         # Configurações do desing
         SQUARESIZE = 90
@@ -375,8 +375,7 @@ class Conect_fuor_Final:
 
                     pygame.display.flip()
             if jogador == 1:
-                heuristicausar = 2
-                melhor_jogada = self.melhor_jogada(grid, jogador, heuristicausar)
+                melhor_jogada = self.melhor_jogada(grid, jogador, heuristica)
                 grid[melhor_jogada[0]][melhor_jogada[1]] = 1
                 gameover = c.teste_terminal(grid, jogador)
                 self.draw_board(grid)
@@ -512,5 +511,7 @@ if __name__ == '__main__':
     grid[0][4] = 1
     print(c.verifica_terminal(grid))
     '''
-
-    c.principal_d(2)
+    #heuristica 1 será pevando em consideração apenas conexão de três;
+    heuristica = 2 #Leva em consideração vários fatores
+    #Digite 1 para a IA começar e 2 para o oponente
+    c.principal_d(2,heuristica)
