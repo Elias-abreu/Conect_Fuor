@@ -503,14 +503,6 @@ class Conect_fuor_Final:
 if __name__ == '__main__':
     pygame.init()
     c = Conect_fuor_Final()
-    grid = c.iniciar_grade()
-    '''
-    grid[0][1] = 1
-    grid[0][2] = 1
-    grid[0][3] = 1
-    grid[0][4] = 1
-    print(c.verifica_terminal(grid))
-    '''
     #heuristica 1 será pevando em consideração apenas conexão de três;
     heuristica = 2 #Leva em consideração vários fatores
     #Digite 1 para a IA começar e 2 para o oponente
